@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import FeedbackOptions from "./FeedbackOptions/FeedbackOptions";
 import Statistics from "./Statistics/Statistics";
 import Section from "./Section/Section";
+import Notification from "./Notification/Notification";
 
 export class App extends Component {
 
@@ -44,15 +45,17 @@ export class App extends Component {
         </Section>
         
         <Section title="Statistics">
-          <Statistics
+          
+          {total?<Statistics
             good={this.state.good}
             neutral={this.state.neutral}
             bad={this.state.bad}
             total={total}
             positivePercentage={goodPercentage}>
-          </Statistics>;
+          </Statistics>:<Notification message="There is no feedback"/>}
+
         </Section>
-        
+    
       </div>);
  }
 };

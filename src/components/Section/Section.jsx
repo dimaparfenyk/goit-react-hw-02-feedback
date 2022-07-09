@@ -7,6 +7,6 @@ const Section = ({ title = "", children }) => {
             {children}
         </h2>
     )
-};
+}
 
 export default Section;
