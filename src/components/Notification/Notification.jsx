@@ -1,7 +1,8 @@
 import React from "react"
+import { Message } from "./Notification.styled";
 
 const Notification = ({ message }) => {
-    return <h2>{message}</h2>
+    return <Message>{message}</Message>
 };
 
 export default Notification;
